@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+// Production-ready Chatbot Web App (React + TypeScript + Tailwind CSS)
+// Single-command runnable app with authentication and chat interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+// === Tools & Libraries ===
+// - Framework: React (with Vite for fast bundling)
+// - Auth: JWT (JSON Web Token)
+// - Styling: Tailwind CSS (with dark/light mode toggle)
+// - Code Quality: TypeScript, ESLint, Prettier
+// - Backend (dummy): Express.js or Mock Service
 
-Currently, two official plugins are available:
+// === Project Structure ===
+// /src
+// ├── auth/           // auth logic (login/register, JWT handling)
+// ├── components/     // reusable components (ChatBox, MessageBubble, etc.)
+// ├── pages/          // routing pages (Login.tsx, Register.tsx, Chat.tsx)
+// ├── hooks/          // custom hooks (useAuth, useChatScroll)
+// ├── services/       // API services (auth.ts, chat.ts)
+// ├── App.tsx         // root app with routes and theme toggle
+// └── main.tsx        // app entry point
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+// === Key Features ===
 
-## Expanding the ESLint configuration
+// 1. ✅ Auth (JWT-based)
+//    - Register/Login forms
+//    - JWT stored in HTTP-only cookies
+//    - Auth context (React Context API)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+// 2. ✅ Chat Interface
+//    - Realtime stream simulation with dummy LLM (setTimeout)
+//    - Message history scrollback
+//    - Input disabled with loading spinner when waiting for bot
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+// 3. ✅ Styling
+//    - Tailwind setup with dark/light toggle
+//    - Responsive UI for mobile and desktop
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+// 4. ✅ Code Quality
+//    - Written in TypeScript
+//    - ESLint + Prettier configured
+//    - Functional, reusable components
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+// === Example Bot Prompt Flow ===
+// User: "Hello, what can you do?"
+// Bot (dummy): "Hi! I'm a simple chatbot. I can echo your messages or answer basic questions."
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+// === Run App in One Command ===
+// npm install && npm run dev
+
+// === Hosting Ready ===
+// Optimized for deployment on Vercel, Netlify, or Docker
+
+// === PDF/Notion Logic Breakdown ===
+// - Auth flow chart (Register/Login → Token Storage → Protected Route)
+// - Component tree layout
+// - Prompt processing logic for bot simulation
+// - Dark mode toggle with localStorage
+
+// === Drive Link for Documentation ===
+// 👉 [Add your Google Drive link here to PDF/Notion documentation with screenshots, code snippets, and logic]
